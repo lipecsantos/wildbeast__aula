@@ -6,6 +6,12 @@
     font-family: 'Vollkorn', Georgia, serif;
 }
 
+img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
 
 /* ALL GRID */
 
@@ -90,6 +96,122 @@
 
 .content {
     grid-area: content;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.col__wide {
+    grid-column: 1 / -1;
+}
+
+.img__1 {
+    grid-row: span 2;
+    align-self: end;
+}
+
+.img__2 {
+    align-self: end;
+}
+
+
+/* ESTILOS CONTENT */
+
+p {
+    font-size: 1.12em;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+    color: rgba(0, 0, 0, .7);
+}
+
+.infos p+p {
+    margin-top: 30px;
+}
+
+
+/* TÍTULO */
+
+.title {
+    color: #B07DFB;
+}
+
+.title h1 {
+    font-size: 3.7em;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.title span {
+    font-size: 0.875em;
+    font-style: italic;
+}
+
+
+/* FEATURES */
+
+.features {
+    display: flex;
+    align-items: flex-start;
+}
+
+.features>div {
+    width: 80px;
+    text-align: center;
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+    position: relative;
+}
+
+.features>div:first-child {
+    margin-right: 30px;
+}
+
+.features span {
+    display: block;
+    color: #B07DFB;
+}
+
+.number {
+    color: #B07DFB;
+    font-size: 3em;
+    line-height: 1;
+    margin: 10px auto;
+}
+
+.weight,
+.age {
+    background: white;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0;
+    position: relative;
+    top: 2px;
+}
+
+.destaque {
+    font-size: 0.875em;
+    color: #B07DFB;
+    max-width: 16em;
+}
+
+.quote,
+.atributes {
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+.quote p {
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    color: white;
 }
 
 
@@ -105,6 +227,7 @@
     align-content: start;
     padding: 30px;
     grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .ads img {
